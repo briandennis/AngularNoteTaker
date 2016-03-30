@@ -1,0 +1,20 @@
+{
+  "name": "messing-with-angular",
+  "version": "1.0.0",
+  "description": "Another repo for messing with Angular 2 tutorials",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/briandennis/MessingWithAngular.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/briandennis/MessingWithAngular/issues"
+  },
+  "homepage": "https://github.com/briandennis/MessingWithAngular#readme"
+}
