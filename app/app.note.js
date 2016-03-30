@@ -1,4 +1,4 @@
-System.register(['angular2/core', './app.note'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,33 +10,30 @@ System.register(['angular2/core', './app.note'], function(exports_1, context_1) 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, app_note_1;
-    var RootComponent;
+    var core_1;
+    var Note;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (app_note_1_1) {
-                app_note_1 = app_note_1_1;
             }],
         execute: function() {
-            RootComponent = (function () {
-                function RootComponent() {
-                    this.mainNote = [new app_note_1.Note("OH MY GOD!", 'Brian')];
+            Note = (function () {
+                function Note(text, name) {
+                    this.noteText = text;
+                    this.tmpName = name;
                 }
-                RootComponent = __decorate([
+                Note = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        directives: [app_note_1.Note],
-                        template: "\n\n    <h1>My First Angular 2 App</h1>\n    {{}}\n\n\n  "
+                        selector: 'note',
+                        template: "<div class='note'>\n              <h2>This is a note!</h2>\n             </div>\n\n  "
                     }), 
-                    __metadata('design:paramtypes', [])
-                ], RootComponent);
-                return RootComponent;
+                    __metadata('design:paramtypes', [String, String])
+                ], Note);
+                return Note;
             }());
-            exports_1("RootComponent", RootComponent);
+            exports_1("Note", Note);
         }
     }
 });
-//# sourceMappingURL=app.root.js.map
+//# sourceMappingURL=app.note.js.map
