@@ -4,12 +4,13 @@
   "description": "Another repo for messing with Angular 2 tutorials",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" \"npm run sass\" ",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
     "typings": "typings",
-    "postinstall": "typings install"
+    "postinstall": "typings install",
+    "sass": "sass --watch scss/index.scss:css/index.css"
   },
   "repository": {
     "type": "git",
