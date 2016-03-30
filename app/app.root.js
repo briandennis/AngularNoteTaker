@@ -23,13 +23,13 @@ System.register(['angular2/core', './app.note'], function(exports_1, context_1) 
         execute: function() {
             RootComponent = (function () {
                 function RootComponent() {
-                    this.mainNote = [new app_note_1.Note("OH MY GOD!", 'Brian')];
+                    this.mainNotes = [new app_note_1.Note("OH MY GOD!", 'Brian')];
                 }
                 RootComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
                         directives: [app_note_1.Note],
-                        template: "\n\n    <h1>My First Angular 2 App</h1>\n    {{}}\n\n\n  "
+                        template: "\n\n    <h1>My First Angular 2 App</h1>\n    <note></note>\n\n\n\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], RootComponent);

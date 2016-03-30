@@ -7,11 +7,12 @@ import {Note} from './app.note';
   template: `
 
     <h1>My First Angular 2 App</h1>
-    {{}}
+    <note></note>
+
 
 
   `
 })
 export class RootComponent{
-  mainNote: Note[] = [new Note("OH MY GOD!", 'Brian')];
+  mainNotes: Note[] = [new Note("OH MY GOD!", 'Brian')];
 }

@@ -5,6 +5,8 @@ import {Component} from 'angular2/core';
   selector: 'note',
   template: `<div class='note'>
               <h2>This is a note!</h2>
+              <h3> {{noteText}} </h3>
+              <h4> Authored by {{tmpName}} </h4>
              </div>
 
   `

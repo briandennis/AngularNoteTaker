@@ -26,7 +26,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 Note = __decorate([
                     core_1.Component({
                         selector: 'note',
-                        template: "<div class='note'>\n              <h2>This is a note!</h2>\n             </div>\n\n  "
+                        template: "<div class='note'>\n              <h2>This is a note!</h2>\n              <h3> {{noteText}} </h3>\n              <h4> Authored by {{tmpName}} </h4>\n             </div>\n\n  "
                     }), 
                     __metadata('design:paramtypes', [String, String])
                 ], Note);
