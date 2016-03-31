@@ -29,6 +29,10 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     var newText = window.prompt();
                     this.notes[this.notes.indexOf(note)].text = newText;
                 };
+                RootComponent.prototype.changePriority = function (note) {
+                    var newPriority = window.prompt("New Priority: Low, Medium, High").toLowerCase();
+                    this.notes[this.notes.indexOf(note)].priority = newPriority;
+                };
                 RootComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',

@@ -34,4 +34,8 @@ export class RootComponent{
     var newText = window.prompt();
     this.notes[this.notes.indexOf(note)].text = newText;
   }
+  changePriority(note: Note){
+    var newPriority = window.prompt("New Priority: Low, Medium, High").toLowerCase();
+    this.notes[this.notes.indexOf(note)].priority = newPriority;
+  }
 }
