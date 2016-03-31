@@ -1,21 +1,32 @@
+h1{
+  padding-left: 20px;
+  font-family: helvetica;
+}
+
 .note{
   width: 250px;
   height: 250px;
   margin: auto;
 
   background: #FFFFA5;
+  box-shadow: 4px 4px 2px rgba(0,0,0,0.1);
 
   text-align: center;
-  font-family: "Comic Sans";
+  font-family: "Comic Sans MS";
+  font-size: 17px;
   color: black;
 }
 .textRow{
   height: 90%;
   width: 100%;
+  line-height: 1.5;
 }
 .buttonsRow{
   height: 10%;
   width: 100%;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
 
   display: flex;
   flex-direction: row;
@@ -26,10 +37,12 @@
 
   background: none;
   border: none;
+  outline: none;
 
-  font-size: 1.3em;
+  font-size: 17px;
   text-align: center;
   color: black;
+
 }
 .editButton:hover{
   color: blue;
