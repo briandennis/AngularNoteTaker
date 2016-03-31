@@ -11,8 +11,8 @@ import {Note} from './app.note';
         <p> {{note.text}} </p>
       </div>
       <div class='buttonsRow'>
-        <button (click)="edit(note)">Edit</button>
-        <button (click)="deleteNote(note)">Delete</button>
+        <button (click)="edit(note)" class='noteButton editButton'><i class='fa fa-pencil'></i></button>
+        <button (click)="deleteNote(note)" class='noteButton deleteButton'><i class='fa fa-trash'></i></button>
       </div>
     </div>
 

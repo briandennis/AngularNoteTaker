@@ -13,7 +13,27 @@
   height: 90%;
   width: 100%;
 }
-.buttonRow{
+.buttonsRow{
   height: 10%;
   width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.noteButton{
+
+  background: none;
+  border: none;
+
+  font-size: 1.3em;
+  text-align: center;
+  color: black;
+}
+.editButton:hover{
+  color: blue;
+}
+.deleteButton:hover{
+  color: red;
 }

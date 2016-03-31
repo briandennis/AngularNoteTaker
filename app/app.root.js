@@ -32,7 +32,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 RootComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n\n    <h1>My First Angular 2 App</h1>\n    <div class='note' *ngFor=\"#note of notes\">\n      <div class='textRow'>\n        <p> {{note.text}} </p>\n      </div>\n      <div class='buttonsRow'>\n        <button (click)=\"edit(note)\">Edit</button>\n        <button (click)=\"deleteNote(note)\">Delete</button>\n      </div>\n    </div>\n\n\n\n  "
+                        template: "\n\n    <h1>My First Angular 2 App</h1>\n    <div class='note' *ngFor=\"#note of notes\">\n      <div class='textRow'>\n        <p> {{note.text}} </p>\n      </div>\n      <div class='buttonsRow'>\n        <button (click)=\"edit(note)\" class='noteButton editButton'><i class='fa fa-pencil'></i></button>\n        <button (click)=\"deleteNote(note)\" class='noteButton deleteButton'><i class='fa fa-trash'></i></button>\n      </div>\n    </div>\n\n\n\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], RootComponent);
