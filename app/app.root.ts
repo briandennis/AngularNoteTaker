@@ -7,8 +7,13 @@ import {Note} from './app.note';
 
     <h1>My First Angular 2 App</h1>
     <div class='note' *ngFor="#note of notes">
-      <p> {{note.text}} </p>
-      <button (click)="deleteNote(note)">Delete</button>
+      <div class='textRow'>
+        <p> {{note.text}} </p>
+      </div>
+      <div class='buttonsRow'>
+        <button (click)="edit(note)">Edit</button>
+        <button (click)="deleteNote(note)">Delete</button>
+      </div>
     </div>
 
 
@@ -20,5 +25,9 @@ export class RootComponent{
 
   deleteNote(note: Note){
     this.notes.splice(this.notes.indexOf(note),1);
+  }
+  edit(note: Note){
+    var newText = window.prompt();
+    this.notes[this.notes.indexOf(note)].text = newText;
   }
 }
