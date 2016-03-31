@@ -20,7 +20,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             RootComponent = (function () {
                 function RootComponent() {
-                    this.notes = [{ text: 'this is my text!', color: 0 }, { text: 'this is my other text!', color: 0 }];
+                    this.notes = [{ text: 'this is my text!', priority: "low" }, { text: 'this is my other text!', priority: "low" }];
                 }
                 RootComponent.prototype.deleteNote = function (note) {
                     this.notes.splice(this.notes.indexOf(note), 1);
@@ -32,7 +32,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 RootComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n\n    <h1>My First Angular 2 App</h1>\n    <div class='note' *ngFor=\"#note of notes\">\n      <div class='textRow'>\n        <p> {{note.text}} </p>\n      </div>\n      <div class='buttonsRow'>\n        <button (click)=\"edit(note)\" class='noteButton editButton'><i class='fa fa-pencil'></i></button>\n        <button (click)=\"deleteNote(note)\" class='noteButton deleteButton'><i class='fa fa-trash'></i></button>\n      </div>\n    </div>\n\n\n\n  "
+                        template: "\n    <header>\n      <h1>My First Angular 2 App</h1>\n    </header>\n    <div class='noteBoard'>\n      <div *ngFor=\"#note of notes\" class='note {{note.priority}}'>\n        <div class='textRow'>\n          <p> {{note.text}} </p>\n        </div>\n        <div class='buttonsRow'>\n        <button (click)=\"changePriority(note)\" class='noteButton priorityButton'><i class='fa fa-wrench'></i></button>\n          <button (click)=\"edit(note)\" class='noteButton editButton'><i class='fa fa-pencil'></i></button>\n          <button (click)=\"deleteNote(note)\" class='noteButton deleteButton'><i class='fa fa-trash'></i></button>\n        </div>\n      </div>\n    </div>\n\n\n\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], RootComponent);

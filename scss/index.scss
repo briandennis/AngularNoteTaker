@@ -1,6 +1,24 @@
-h1{
-  padding-left: 20px;
-  font-family: helvetica;
+body{
+  height: 100vh;
+  width: 100vw;
+
+  padding-left: 0px;
+  margin-left: 0px;
+}
+header{
+  height: 10%;
+  width: 100%;
+
+  h1{
+    padding-left: 20px;
+    font-family: helvetica;
+  }
+}
+
+.noteBoard{
+  height: 80%;
+  width: 100%;
+
 }
 
 .note{
@@ -8,7 +26,6 @@ h1{
   height: 250px;
   margin: auto;
 
-  background: #FFFFA5;
   box-shadow: 4px 4px 2px rgba(0,0,0,0.1);
 
   text-align: center;
@@ -19,7 +36,11 @@ h1{
 .textRow{
   height: 90%;
   width: 100%;
-  line-height: 1.5;
+
+  text-align: center;
+  p{
+
+  }
 }
 .buttonsRow{
   height: 10%;
@@ -49,4 +70,17 @@ h1{
 }
 .deleteButton:hover{
   color: red;
+}
+.priorityButton:hover{
+  color: green;
+}
+
+.low{
+  background: #B5F19B;
+}
+.medium{
+  background:#FFFFA5;
+}
+.high{
+  background: #F58282;
 }
