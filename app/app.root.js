@@ -20,12 +20,15 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             RootComponent = (function () {
                 function RootComponent() {
-                    this.notes = [{ text: 'this is my text!', color: 0 }];
+                    this.notes = [{ text: 'this is my text!', color: 0 }, { text: 'this is my other text!', color: 0 }];
                 }
+                RootComponent.prototype.deleteNote = function (note) {
+                    this.notes.splice(this.notes.indexOf(note), 1);
+                };
                 RootComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n\n    <h1>My First Angular 2 App</h1>\n    <div class='note' *ngFor=\"#note of notes\">\n      <p> {{note.text}} </p>\n    </div>\n\n\n\n  "
+                        template: "\n\n    <h1>My First Angular 2 App</h1>\n    <div class='note' *ngFor=\"#note of notes\">\n      <p> {{note.text}} </p>\n      <button (click)=\"deleteNote(note)\">Delete</button>\n    </div>\n\n\n\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], RootComponent);

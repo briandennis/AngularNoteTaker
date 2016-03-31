@@ -8,6 +8,7 @@ import {Note} from './app.note';
     <h1>My First Angular 2 App</h1>
     <div class='note' *ngFor="#note of notes">
       <p> {{note.text}} </p>
+      <button (click)="deleteNote(note)">Delete</button>
     </div>
 
 
@@ -15,5 +16,9 @@ import {Note} from './app.note';
   `
 })
 export class RootComponent{
-  notes: Note[] = [{text: 'this is my text!', color: 0}];
+  notes: Note[] = [{text: 'this is my text!', color: 0},{text: 'this is my other text!', color: 0}];
+
+  deleteNote(note: Note){
+    this.notes.splice(this.notes.indexOf(note),1);
+  }
 }
