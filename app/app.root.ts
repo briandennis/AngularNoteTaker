@@ -5,7 +5,8 @@ import {Note} from './app.note';
   selector: 'my-app',
   template: `
     <header>
-      <h1>My First Angular 2 App</h1>
+      <h1>Super Basic Note Taker</h1>
+      <button class='addButton' (click)='addNote()'>+</button>
     </header>
     <div class='noteBoard'>
       <div *ngFor="#note of notes" class='note {{note.priority}}'>
@@ -19,6 +20,9 @@ import {Note} from './app.note';
         </div>
       </div>
     </div>
+    <footer>
+      <p> Handcrafted by Brian Dennis </p>
+    </footer>
 
 
 
@@ -31,11 +35,15 @@ export class RootComponent{
     this.notes.splice(this.notes.indexOf(note),1);
   }
   edit(note: Note){
-    var newText = window.prompt();
+    var newText = window.prompt('New note text: ');
     this.notes[this.notes.indexOf(note)].text = newText;
   }
   changePriority(note: Note){
     var newPriority = window.prompt("New Priority: Low, Medium, High").toLowerCase();
     this.notes[this.notes.indexOf(note)].priority = newPriority;
+  }
+  addNote(){
+    var newText = window.prompt('New note text: ');
+    this.notes.push({text: newText, priority: 'low'});
   }
 }

@@ -26,17 +26,21 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     this.notes.splice(this.notes.indexOf(note), 1);
                 };
                 RootComponent.prototype.edit = function (note) {
-                    var newText = window.prompt();
+                    var newText = window.prompt('New note text: ');
                     this.notes[this.notes.indexOf(note)].text = newText;
                 };
                 RootComponent.prototype.changePriority = function (note) {
                     var newPriority = window.prompt("New Priority: Low, Medium, High").toLowerCase();
                     this.notes[this.notes.indexOf(note)].priority = newPriority;
                 };
+                RootComponent.prototype.addNote = function () {
+                    var newText = window.prompt('New note text: ');
+                    this.notes.push({ text: newText, priority: 'low' });
+                };
                 RootComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    <header>\n      <h1>My First Angular 2 App</h1>\n    </header>\n    <div class='noteBoard'>\n      <div *ngFor=\"#note of notes\" class='note {{note.priority}}'>\n        <div class='textRow'>\n          <p> {{note.text}} </p>\n        </div>\n        <div class='buttonsRow'>\n        <button (click)=\"changePriority(note)\" class='noteButton priorityButton'><i class='fa fa-wrench'></i></button>\n          <button (click)=\"edit(note)\" class='noteButton editButton'><i class='fa fa-pencil'></i></button>\n          <button (click)=\"deleteNote(note)\" class='noteButton deleteButton'><i class='fa fa-trash'></i></button>\n        </div>\n      </div>\n    </div>\n\n\n\n  "
+                        template: "\n    <header>\n      <h1>Super Basic Note Taker</h1>\n      <button class='addButton' (click)='addNote()'>+</button>\n    </header>\n    <div class='noteBoard'>\n      <div *ngFor=\"#note of notes\" class='note {{note.priority}}'>\n        <div class='textRow'>\n          <p> {{note.text}} </p>\n        </div>\n        <div class='buttonsRow'>\n        <button (click)=\"changePriority(note)\" class='noteButton priorityButton'><i class='fa fa-wrench'></i></button>\n          <button (click)=\"edit(note)\" class='noteButton editButton'><i class='fa fa-pencil'></i></button>\n          <button (click)=\"deleteNote(note)\" class='noteButton deleteButton'><i class='fa fa-trash'></i></button>\n        </div>\n      </div>\n    </div>\n    <footer>\n      <p> Handcrafted by Brian Dennis </p>\n    </footer>\n\n\n\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], RootComponent);
